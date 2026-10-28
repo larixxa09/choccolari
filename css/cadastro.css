@@ -1,0 +1,882 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dourado: #cda757;
+  --dourado-claro: #e9c977;
+  --laranja: #ff9200;
+  --preto: #000000;
+  --branco: #ffffff;
+  --cinza: #bdbdbd;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--preto);
+  color: var(--preto);
+  min-height: 100vh;
+}
+
+/* =========================
+   MENU SUPERIOR
+========================= */
+
+.menu {
+  height: 56px;
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: 0 18px;
+
+  background: #000000;
+}
+
+.menu nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.menu a {
+  color: #999999;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 400;
+  transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.ativo {
+  color: #ffffff;
+}
+
+/* =========================
+   ÁREA PRINCIPAL
+========================= */
+
+.principal {
+  display: grid;
+  grid-template-columns: 39.8% 60.2%;
+
+  width: 100%;
+  min-height: 670px;
+}
+
+/* =========================
+   LATERAL ESQUERDA
+========================= */
+
+.apresentacao {
+  position: relative;
+
+  min-height: 670px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 45px 25px 0;
+
+  color: #ffffff;
+
+  background: radial-gradient(
+    ellipse at center,
+    #21180e 0%,
+    #080706 55%,
+    #000000 100%
+  );
+}
+
+/* EFEITO DE TECIDO */
+
+.apresentacao::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    125deg,
+    transparent 15%,
+    rgba(205, 167, 87, 0.08) 18%,
+    transparent 21%,
+    transparent 38%,
+    rgba(205, 167, 87, 0.07) 41%,
+    transparent 44%
+  );
+
+  pointer-events: none;
+}
+
+/* LOGO COMO IMAGEM */
+
+.marca {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 27px;
+}
+
+.logo-choccolari {
+  display: block;
+
+  width: 200px;
+  height: 150px;
+
+  object-fit: contain;
+}
+
+/* TEXTO DA APRESENTAÇÃO */
+
+.texto-apresentacao {
+  position: relative;
+  z-index: 2;
+
+  max-width: 320px;
+  text-align: center;
+}
+
+.texto-apresentacao h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 29px;
+  font-weight: 500;
+  line-height: 1.2;
+
+  color: #ffffff;
+}
+
+.texto-apresentacao h2 span {
+  display: block;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 34px;
+  font-weight: 500;
+
+  color: var(--dourado);
+}
+
+.divisor {
+  color: var(--dourado);
+  font-size: 15px;
+
+  margin: 14px 0;
+}
+
+.texto-apresentacao p {
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.8;
+
+  color: #e5e5e5;
+}
+
+/* IMAGEM DOS CHOCOLATES */
+
+.imagem-chocolates {
+  position: absolute;
+
+  width: 100%;
+  height: 48%;
+
+  left: 0;
+  bottom: 0;
+
+  object-fit: cover;
+  object-position: center top;
+
+  z-index: 1;
+}
+
+/* =========================
+   LATERAL DIREITA
+========================= */
+
+.area-cadastro {
+  background: #ffffff;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 12px 25px 15px;
+
+  min-width: 0;
+}
+
+.formulario-container {
+  width: 100%;
+  max-width: 620px;
+}
+
+/* ÍCONE DE USUÁRIO */
+
+.icone-usuario {
+  position: relative;
+
+  width: 46px;
+  height: 46px;
+
+  margin: 0 auto 12px;
+
+  border: 1.5px solid var(--laranja);
+  border-radius: 50%;
+}
+
+.icone-usuario::before {
+  content: "";
+
+  position: absolute;
+
+  width: 17px;
+  height: 17px;
+
+  top: 7px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border: 1.3px solid var(--laranja);
+  border-radius: 50%;
+}
+
+.icone-usuario span {
+  position: absolute;
+
+  width: 30px;
+  height: 13px;
+
+  left: 50%;
+  bottom: 5px;
+
+  transform: translateX(-50%);
+
+  border: 1.3px solid var(--laranja);
+  border-radius: 18px 18px 12px 12px;
+}
+
+/* TÍTULOS */
+
+.titulo-cadastro {
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 30px;
+  font-weight: 600;
+
+  text-align: center;
+}
+
+.subtitulo {
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 25px;
+  color: var(--laranja);
+
+  text-align: center;
+
+  margin-bottom: 7px;
+}
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+#formCadastro {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+  column-gap: 40px;
+  row-gap: 5px;
+
+  padding: 0 8px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.campo label {
+  font-size: 18px;
+  font-weight: 400;
+
+  margin-bottom: 3px;
+}
+
+/* POSIÇÃO DOS CAMPOS */
+
+.campo-nome {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.campo-email {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.campo-senha {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.campo-confirmar {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.campo-data {
+  grid-column: 1;
+  grid-row: 4;
+}
+
+/* CAIXAS DOS INPUTS */
+
+.input-container {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 47px;
+
+  border: 4px solid #bdbdbd;
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  transition: border-color 0.3s;
+}
+
+.input-container:focus-within {
+  border-color: var(--dourado);
+}
+
+.icone {
+  flex: 0 0 43px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #888888;
+  font-size: 23px;
+}
+
+.input-container input {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+
+  padding: 0 5px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #222222;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+.input-container input::placeholder {
+  color: #aaaaaa;
+  opacity: 1;
+  text-align: center;
+}
+
+/* =========================
+   RECEBER NOVIDADES
+========================= */
+
+.opcao-novidades {
+  grid-column: 1 / -1;
+
+  display: flex;
+  align-items: center;
+
+  margin: 6px 0 5px;
+}
+
+.opcao-novidades input {
+  width: 15px;
+  height: 15px;
+
+  margin-right: 4px;
+
+  accent-color: var(--dourado);
+
+  flex-shrink: 0;
+}
+
+.opcao-novidades label {
+  max-width: 330px;
+
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.opcao-novidades label span {
+  color: var(--laranja);
+}
+
+/* =========================
+   MENSAGEM
+========================= */
+
+#mensagem {
+  grid-column: 1 / -1;
+
+  font-size: 13px;
+  text-align: center;
+  line-height: 1.4;
+
+  color: #a32323;
+}
+
+#mensagem:empty {
+  display: none;
+}
+
+/* =========================
+   BOTÃO CADASTRAR
+========================= */
+
+.botao-cadastrar {
+  grid-column: 1 / -1;
+  justify-self: center;
+
+  width: 260px;
+  min-height: 43px;
+
+  border: none;
+
+  background: linear-gradient(135deg, #e4c477, #cda757, #e8c97d);
+
+  color: #000000;
+
+  font-size: 16px;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botao-cadastrar:hover {
+  background: #b88932;
+  transform: translateY(-2px);
+}
+
+/* SEPARADOR */
+
+.separador {
+  grid-column: 1 / -1;
+
+  text-align: center;
+  font-size: 14px;
+
+  margin: 1px 0;
+}
+
+/* =========================
+   BOTÃO GOOGLE
+========================= */
+
+.botao-google {
+  grid-column: 1 / -1;
+  justify-self: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  width: 290px;
+  min-height: 53px;
+
+  border: 3px solid #000000;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #000000;
+
+  font-size: 20px;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botao-google:hover {
+  background: #f5f5f5;
+  border-color: var(--dourado-escuro);
+}
+
+/* LETRA G COLORIDA */
+
+.google-logo {
+  display: inline-flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 28px;
+  height: 28px;
+
+  flex-shrink: 0;
+}
+
+.google-letra {
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 30px;
+  font-weight: bold;
+
+  background: conic-gradient(
+    from -45deg,
+    #4285f4 0deg 90deg,
+    #34a853 90deg 180deg,
+    #fbbc05 180deg 250deg,
+    #ea4335 250deg 310deg,
+    #4285f4 310deg 360deg
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+}
+
+/* =========================
+   LOGIN
+========================= */
+
+.login-existente {
+  grid-column: 1 / -1;
+
+  text-align: center;
+
+  font-size: 16px;
+  margin-top: 1px;
+}
+
+.login-existente a {
+  color: var(--laranja);
+
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.login-existente a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+.rodape {
+  min-height: 86px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  padding: 7px 20px;
+
+  background: #000000;
+  color: #ffffff;
+}
+
+.beneficio {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  border-right: 1px solid #665018;
+}
+
+.beneficio:last-child {
+  border-right: none;
+}
+
+.icone-beneficio {
+  color: #ffb000;
+
+  font-size: 29px;
+  line-height: 1.2;
+
+  margin-bottom: 5px;
+}
+
+.beneficio p {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width: 1000px) {
+  .menu nav {
+    gap: 14px;
+  }
+
+  .menu a {
+    font-size: 18px;
+  }
+
+  .principal {
+    grid-template-columns: 36% 64%;
+  }
+
+  .apresentacao {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .logo-choccolari {
+    width: 175px;
+  }
+
+  #formCadastro {
+    column-gap: 18px;
+  }
+
+  .campo label {
+    font-size: 15px;
+  }
+
+  .input-container {
+    height: 44px;
+    border-width: 3px;
+  }
+
+  .input-container input {
+    font-size: 12px;
+  }
+
+  .icone {
+    flex-basis: 30px;
+  }
+}
+
+/* =========================
+   CELULARES
+========================= */
+
+@media (max-width: 650px) {
+  .menu {
+    height: auto;
+    min-height: 55px;
+
+    justify-content: center;
+
+    padding: 12px 8px;
+  }
+
+  .menu nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .menu a {
+    font-size: 14px;
+  }
+
+  .principal {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .apresentacao {
+    min-height: 470px;
+    padding-top: 65px;
+  }
+
+  .logo-choccolari {
+   width: 250px;
+    height: 60px;
+  }
+
+  .marca {
+    margin-bottom: 60px;
+  }
+
+  .texto-apresentacao h2 {
+    font-size: 27px;
+  }
+
+  .texto-apresentacao h2 span {
+    font-size: 32px;
+  }
+
+  .imagem-chocolates {
+    height: 43%;
+  }
+
+  .area-cadastro {
+    padding: 25px 15px 30px;
+  }
+
+  .formulario-container {
+    max-width: 450px;
+  }
+
+  .titulo-cadastro {
+    font-size: 28px;
+  }
+
+  .subtitulo {
+    font-size: 23px;
+    margin-bottom: 15px;
+  }
+
+  #formCadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    padding: 0;
+  }
+
+  .campo label {
+    font-size: 15px;
+  }
+
+  .input-container {
+    height: 48px;
+  }
+
+  .input-container input {
+    font-size: 14px;
+  }
+
+  .opcao-novidades {
+    align-items: flex-start;
+    margin: 2px 0;
+  }
+
+  .opcao-novidades label {
+    font-size: 13px;
+  }
+
+  .botao-cadastrar {
+    width: 100%;
+    min-height: 47px;
+  }
+
+  .botao-google {
+    width: 100%;
+    min-height: 52px;
+    font-size: 17px;
+  }
+
+  .login-existente {
+    font-size: 14px;
+    margin-top: 3px;
+  }
+
+
+.rodape {
+    min-height: 86px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px 20px;
+    background: #000000;
+    color: #FFFFFF;
+}
+
+.beneficio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-right: 1px solid #665018;
+    gap: 5px;
+}
+
+.beneficio:last-child {
+    border-right: none;
+}
+
+.icone-beneficio {
+    color: #CDA757;
+    font-size: 28px;
+    transition: 0.3s;
+}
+
+.beneficio:hover .icone-beneficio {
+    color: #F2D58B;
+    transform: translateY(-3px);
+}
+
+.beneficio p {
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .rodape {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .beneficio {
+        border-right: none;
+        padding: 10px;
+    }
+}
+
+  .beneficio {
+    border-right: none;
+    padding: 8px 0;
+  }
+}
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 360px) {
+  .menu nav {
+    gap: 9px;
+  }
+
+  .menu a {
+    font-size: 12px;
+  }
+
+  .botao-google {
+    font-size: 15px;
+  }
+}

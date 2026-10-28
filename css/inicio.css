@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap");
+:root {
+  --ouro: #cda757;
+  --ouro-claro: #f1d47a;
+  --preto: #050505;
+  --cinza: #bdbdbd;
+  --branco: #f8f6f0;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: var(--preto);
+  color: var(--branco);
+  font-family: Montserrat, Arial, sans-serif;
+  min-height: 100vh;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+input,
+textarea {
+  font: inherit;
+}
+.cabecalho {
+  height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 3%;
+  gap: 25px;
+  border-bottom: 4px solid var(--ouro);
+  background: #030303;
+  position: relative;
+  z-index: 2;
+}
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ouro);
+  font:
+    500 32px "Cormorant Garamond",
+    serif;
+  white-space: nowrap;
+}
+.marca img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(18px, 4vw, 65px);
+  flex: 1;
+}
+.menu a {
+  font-size: 19px;
+  padding: 10px 3px;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+}
+.menu a:hover,
+.menu a.ativo {
+  color: var(--ouro);
+  border-color: var(--ouro);
+}
+.atalhos {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 25px;
+  color: #ddd;
+}
+.atalhos a {
+  position: relative;
+}
+.contador {
+  font-size: 12px;
+  background: #f3c000;
+  color: #000;
+  border-radius: 50%;
+  padding: 2px 5px;
+  position: absolute;
+  top: -7px;
+  right: -9px;
+}
+.dourado {
+  color: var(--ouro);
+}
+.divisor {
+  color: var(--ouro);
+  margin: 18px 0;
+  font-family: serif;
+  letter-spacing: 2px;
+}
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  border: 2px solid var(--ouro);
+  background: linear-gradient(100deg, #cda757, #f0d16d);
+  color: #080808;
+  padding: 14px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.botao:hover {
+  filter: brightness(1.12);
+  transform: translateY(-2px);
+}
+
+.hero {
+  min-height: calc(100vh - 170px);
+  display: grid;
+  grid-template-columns: 44% 56%;
+  align-items: center;
+  overflow: hidden;
+  padding: 35px 4% 25px 4%;
+  background: radial-gradient(ellipse at 75% 50%, #20180e 0, #050505 60%);
+}
+.texto-hero {
+  z-index: 1;
+  padding-left: 1%;
+}
+.texto-hero .destaque {
+  color: var(--ouro);
+  letter-spacing: 1px;
+  font-size: 17px;
+  margin-bottom: 25px;
+}
+.texto-hero h1 {
+  font:
+    500 clamp(48px, 5.4vw, 82px) "Cormorant Garamond",
+    serif;
+  color: var(--ouro);
+  letter-spacing: 2px;
+}
+.texto-hero h2 {
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.6;
+  margin: 30px 0 16px;
+}
+.texto-hero > p:not(.destaque) {
+  max-width: 420px;
+  line-height: 1.7;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+.imagem-hero {
+  height: 580px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagem-hero img {
+  width: 115%;
+  max-height: 600px;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 28px #000);
+}
+.beneficios {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--ouro);
+  padding: 18px 4%;
+  text-align: center;
+  color: var(--ouro);
+  font-size: 27px;
+}
+.beneficios div {
+  border-right: 1px solid #725b24;
+}
+.beneficios div:last-child {
+  border: 0;
+}
+.beneficios span {
+  display: block;
+  color: #eee;
+  font-size: 12px;
+  margin-top: 8px;
+}
+@media (max-width: 900px) {
+  .cabecalho {
+    height: auto;
+    flex-wrap: wrap;
+  }
+  .menu {
+    order: 3;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+  .menu a {
+    font-size: 14px;
+  }
+  .marca {
+    font-size: 25px;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .texto-hero > p:not(.destaque) {
+    margin: 0 auto 28px;
+  }
+  .imagem-hero {
+    height: 350px;
+  }
+  .imagem-hero img {
+    width: 100%;
+  }
+  .beneficios {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  .beneficios div:nth-child(2) {
+    border: 0;
+  }
+}

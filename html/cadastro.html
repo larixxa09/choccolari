@@ -1,11 +1,245 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cadastro | Choccolari</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="/css/cadastro.css" />
+    <script src="/js/cadastro.js" defer></script>
+  </head>
+
+  <body>
+    <!-- MENU SUPERIOR -->
+    <header class="menu">
+      <nav>
+        <a href="/html/inicio.html">login</a>
+        <a href="/html/cadastro.html" class="ativo">CADASTRO</a>
+        <a href="/html/inicio.html">INÍCIO</a>
+        <a href="/html/contato.html">CONTATO</a>
+        <a href="/html/sobre.html">SOBRE</a>
+        <a href="/html/colecoes.html">COLEÇÕES</a>
+      </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="principal">
+      <!-- LATERAL ESQUERDA -->
+      <section class="apresentacao">
+        <!-- LOGO COMO IMAGEM -->
+        <div class="marca">
+          <img
+            src="/images/logo.png"
+            alt="Logo Choccolari"
+            class="logo-choccolari"
+          />
+        </div>
+
+        <div class="texto-apresentacao">
+          <h2>
+            Faça parte do universo
+            <span>Choccolari.</span>
+          </h2>
+
+          <div class="divisor">✥</div>
+
+          <p>
+            Crie sua conta e descubra experiências únicas, feitas com chocolate
+            e dedicação em cada detalhe.
+          </p>
+        </div>
+
+        <!-- IMAGEM DOS CHOCOLATES -->
+        <img
+          src="/images/bombons classicos.png"
+          alt="Caixa de chocolates Choccolari"
+          class="imagem-chocolates"
+        />
+      </section>
+
+      <!-- ÁREA DO CADASTRO -->
+      <section class="area-cadastro">
+        <div class="formulario-container">
+          <!-- ÍCONE DE USUÁRIO -->
+          <div class="icone-usuario">
+            <span></span>
+          </div>
+
+          <h1 class="titulo-cadastro">Crie sua conta</h1>
+
+          <p class="subtitulo">na Choccolari</p>
+
+          <!-- FORMULÁRIO -->
+          <form id="formCadastro">
+            <!-- NOME -->
+            <div class="campo campo-nome">
+              <label for="nome">NOME COMPLETO</label>
+
+              <div class="input-container">
+                <span class="icone">♙</span>
+
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  placeholder="Digite seu nome completo"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- EMAIL -->
+            <div class="campo campo-email">
+              <label for="email">E-MAIL</label>
+
+              <div class="input-container">
+                <span class="icone">✉</span>
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Digite seu e-mail"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- SENHA -->
+            <div class="campo campo-senha">
+              <label for="senha">SENHA</label>
+
+              <div class="input-container">
+                <span class="icone">🔒</span>
+
+                <input
+                  type="password"
+                  id="senha"
+                  name="senha"
+                  placeholder="Crie uma senha"
+                  minlength="8"
+                  autocomplete="new-password"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- CONFIRMAR SENHA -->
+            <div class="campo campo-confirmar">
+              <label for="confirmarSenha"> CONFIRMAR SENHA </label>
+
+              <div class="input-container">
+                <span class="icone">🔒</span>
+
+                <input
+                  type="password"
+                  id="confirmarSenha"
+                  name="confirmarSenha"
+                  placeholder="Confirme sua senha"
+                  autocomplete="new-password"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- DATA DE NASCIMENTO -->
+            <div class="campo campo-data">
+              <label for="dataNascimento"> DATA DE NASCIMENTO </label>
+
+              <div class="input-container">
+                <span class="icone">▦</span>
+
+                <input
+                  type="text"
+                  id="dataNascimento"
+                  name="dataNascimento"
+                  placeholder="dd/mm/aaaa"
+                  maxlength="10"
+                  inputmode="numeric"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- RECEBER NOVIDADES -->
+            <div class="opcao-novidades">
+              <input type="checkbox" id="novidades" name="novidades" />
+
+              <label for="novidades">
+                Quero receber novidades, promoções e conteúdos exclusivos da
+                <span>Choccolari.</span>
+              </label>
+            </div>
+
+            <!-- MENSAGEM -->
+            <p id="mensagem" role="status" aria-live="polite"></p>
+
+            <!-- CADASTRAR -->
+            <button type="submit" class="botao-cadastrar">CADASTRAR</button>
+
+            <p class="separador">OU</p>
+
+            <!-- CADASTRAR COM GOOGLE -->
+            <button type="button" class="botao-google" id="botaoGoogle">
+              <span class="google-logo" aria-hidden="true">
+                <span class="google-letra">G</span>
+              </span>
+
+              <span>Cadastrar com Google</span>
+            </button>
+
+            <!-- LOGIN -->
+            <p class="login-existente">
+              Já tem uma conta?
+
+              <a href="/html/login.html">Fazer login</a>
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+      <div class="beneficio">
+        <span class="icone-beneficio">♢</span>
+
+        <p>
+          Seus dados<br />
+          protegidos
+        </p>
+      </div>
+
+      <div class="beneficio">
+        <span class="icone-beneficio">♧</span>
+
+        <p>
+          Compra segura<br />
+          e garantida
+        </p>
+      </div>
+
+      <div class="beneficio">
+        <span class="icone-beneficio">♙</span>
+
+        <p>
+          Qualidade premium<br />
+          em cada detalhe
+        </p>
+      </div>
+
+      <div class="beneficio">
+        <span class="icone-beneficio"></span>
+
+        <p>
+          Atendimento<br />
+          especializado
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>

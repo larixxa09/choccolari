@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap");
+:root {
+  --ouro: #cda757;
+  --ouro-claro: #f1d47a;
+  --preto: #050505;
+  --cinza: #bdbdbd;
+  --branco: #f8f6f0;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: var(--preto);
+  color: var(--branco);
+  font-family: Montserrat, Arial, sans-serif;
+  min-height: 100vh;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+input,
+textarea {
+  font: inherit;
+}
+.cabecalho {
+  height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 3%;
+  gap: 25px;
+  border-bottom: 4px solid var(--ouro);
+  background: #030303;
+  position: relative;
+  z-index: 2;
+}
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ouro);
+  font:
+    500 32px "Cormorant Garamond",
+    serif;
+  white-space: nowrap;
+}
+.marca img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(18px, 4vw, 65px);
+  flex: 1;
+}
+.menu a {
+  font-size: 19px;
+  padding: 10px 3px;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+}
+.menu a:hover,
+.menu a.ativo {
+  color: var(--ouro);
+  border-color: var(--ouro);
+}
+.atalhos {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 25px;
+  color: #ddd;
+}
+.atalhos a {
+  position: relative;
+}
+.contador {
+  font-size: 12px;
+  background: #f3c000;
+  color: #000;
+  border-radius: 50%;
+  padding: 2px 5px;
+  position: absolute;
+  top: -7px;
+  right: -9px;
+}
+.dourado {
+  color: var(--ouro);
+}
+.divisor {
+  color: var(--ouro);
+  margin: 18px 0;
+  font-family: serif;
+  letter-spacing: 2px;
+}
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  border: 2px solid var(--ouro);
+  background: linear-gradient(100deg, #cda757, #f0d16d);
+  color: #080808;
+  padding: 14px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.botao:hover {
+  filter: brightness(1.12);
+  transform: translateY(-2px);
+}
+
+.menu-superior {
+  height: 56px;
+  background: #030303;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 26px;
+  padding: 0 2%;
+  font-size: 22px;
+  color: #999;
+  white-space: nowrap;
+}
+.menu-superior a:hover,
+.menu-superior a.ativo {
+  color: #fff;
+}
+.login-layout {
+  min-height: calc(100vh - 56px);
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+}
+.login-imagem {
+  height: calc(100vh - 56px);
+  overflow: hidden;
+  border-right: 7px solid var(--ouro);
+  border-radius: 0 48% 48% 0;
+}
+.login-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.login-lado {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+.caixa-login {
+  border: 5px double var(--ouro);
+  width: min(500px, 100%);
+  padding: 35px 11%;
+  min-height: 620px;
+}
+.caixa-login h1 {
+  text-align: center;
+  color: var(--ouro);
+  font:
+    italic 700 30px "Cormorant Garamond",
+    serif;
+}
+.caixa-login > p:first-of-type {
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.caixa-login > p span,
+.criar a {
+  color: var(--ouro);
+}
+.caixa-login .divisor {
+  text-align: center;
+  margin: 22px 0 35px;
+}
+.caixa-login label {
+  display: block;
+  margin: 20px 0 8px;
+}
+.caixa-login input {
+  width: 100%;
+  background: #050505;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  padding: 11px;
+  color: white;
+  outline: none;
+}
+.senha-linha {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.senha-linha input {
+  padding-right: 45px;
+}
+.senha-linha button {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: 0;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 20px;
+}
+.esqueci {
+  display: block;
+  color: var(--ouro);
+  margin: 15px 0 35px;
+  font-size: 14px;
+}
+.caixa-login .botao {
+  width: 100%;
+  height: 54px;
+  font-size: 17px;
+}
+.ou {
+  text-align: center;
+  margin: 17px 0;
+  color: #ddd;
+}
+.google {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  color: white;
+  padding: 12px;
+  cursor: pointer;
+}
+.google span {
+  font-weight: 700;
+  font-size: 25px;
+  color: #4285f4;
+  margin-right: 12px;
+}
+.criar {
+  text-align: center;
+  margin-top: 28px;
+  font-size: 14px;
+}
+#retorno {
+  color: var(--ouro);
+  font-size: 13px;
+  margin-top: 10px;
+}
+@media (max-width: 850px) {
+  .menu-superior {
+    font-size: 14px;
+    gap: 12px;
+    overflow: auto;
+  }
+  .login-layout {
+    grid-template-columns: 1fr;
+  }
+  .login-imagem {
+    height: 250px;
+    border-radius: 0;
+    border-right: 0;
+    border-bottom: 4px solid var(--ouro);
+  }
+  .login-lado {
+    padding: 20px;
+  }
+  .caixa-login {
+    min-height: 0;
+  }
+}
