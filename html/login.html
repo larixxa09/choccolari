@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choccolari | Login</title>
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <nav class="menu-superior"><a class="ativo" href="login.html">login</a><a href="cadastro.html">cadastro</a><a href="inicio.html">inicio</a><a href="contato.html">CONTATO</a><a href="sobre.html">sobre</a><a href="colecoes.html">COLEÇÕES</a></nav>
+  <main class="login-layout">
+    <section class="login-imagem"><img src="imagens/chocolates.svg" alt="Caixa de chocolates Choccolari"></section>
+    <section class="login-lado">
+      <form id="formLogin" class="caixa-login">
+        <h1>Bem-vindo de volta!</h1>
+        <p>Faça login para continuar sua experiência<br> com a <span>Choccolari.</span></p>
+        <div class="divisor">━━━━━━ ✦ ━━━━━━</div>
+        <label for="email">E-MAIL</label>
+        <input id="email" name="email" type="email" placeholder="✉   seu@email.com" autocomplete="email" required>
+        <label for="senha">SENHA</label>
+        <div class="senha-linha"><input id="senha" name="senha" type="password" placeholder="♙   Sua senha" autocomplete="current-password" required><button type="button" id="mostrarSenha" aria-label="Mostrar ou ocultar senha">◉</button></div>
+        <a class="esqueci" href="#" id="esqueciSenha">Esqueci minha senha</a>
+        <button class="botao" type="submit">ENTRAR</button>
+        <div class="ou">━━━━━━ &nbsp; OU &nbsp; ━━━━━━</div>
+        <button class="google" type="button" id="googleLogin"><span>G</span> Entrar com Google</button>
+        <p class="criar">Ainda não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+        <p id="retorno" role="status"></p>
+      </form>
+    </section>
+  </main>
+  <script src="javascript/login.js"></script>
+</body>
+</html>

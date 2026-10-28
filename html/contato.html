@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choccolari | Contato</title>
+  <link rel="stylesheet" href="css/contato.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <a class="marca" href="inicio.html"><img src="imagens/logo.svg" alt="Logo Choccolari"><span>CHOCOLARI</span></a>
+    <nav class="menu"><a href="inicio.html">INÍCIO</a><a href="colecoes.html">COLEÇÕES</a><a href="sobre.html">SOBRE NÓS</a><a class="ativo" href="contato.html">CONTATO</a></nav>
+    <div class="atalhos"><a href="login.html" aria-label="Login">♙</a><a href="cadastro.html" aria-label="Cadastro">♡</a><a href="colecoes.html" aria-label="Carrinho">♧ <span class="contador">0</span></a></div>
+  </header>
+
+  <main>
+    <section class="banner-contato">
+      <p class="dourado">FALE CONOSCO</p>
+      <h1>Estamos aqui para<br><span>tornar seus momentos<br> ainda mais especiais.</span></h1>
+      <div class="divisor">━━━━━━ ❀ ━━━━━━</div>
+      <p>Dúvidas, sugestões ou pedidos especiais?<br>Será um prazer falar com você.</p>
+    </section>
+
+    <section class="conteudo-contato">
+      <form id="formContato" class="form-contato">
+        <h2>✉ &nbsp; <span>ENVIE</span> SUA MENSAGEM</h2>
+        <label for="nome">NOME COMPLETO</label>
+        <input id="nome" name="nome" type="text" placeholder="Digite seu nome completo" required>
+        <label for="email">E-MAIL</label>
+        <input id="email" name="email" type="email" placeholder="Digite seu e-mail" required>
+        <label for="mensagem">MENSAGEM</label>
+        <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem..." required></textarea>
+        <button class="botao" type="submit">ENVIAR MENSAGEM</button>
+        <small>🔒 Seus dados estão protegidos e não serão compartilhados.</small>
+        <p id="retorno" role="status"></p>
+      </form>
+
+      <section class="canais">
+        <h2>☏ &nbsp; OUTROS CANAIS</h2>
+        <div class="canal"><span class="icone">☏</span><p><strong>WHATSAPP</strong><br>(11) 99999-9999<br>Segunda a sexta, das 9h às 18h</p></div>
+        <div class="canal"><span class="icone">◎</span><p><strong>E-MAIL</strong><br>contato@choccolari.com.br<br>Respondemos em até 24h</p></div>
+        <div class="canal"><span class="icone">☎</span><p><strong>TELEFONE</strong><br>(11) 99999-9999<br>Segunda a sexta, das 9h às 18h</p></div>
+        <div class="canal"><span class="icone">⌖</span><p><strong>ENDEREÇO</strong><br>Rua do Chocolate, 123<br>Vila Doce - Luminárias</p></div>
+      </section>
+
+      <section class="visita">
+        <img src="imagens/mapa.svg" alt="Mapa ilustrativo da localização da loja">
+        <h2>⌖ &nbsp; <span>VISITE</span> NOSSA LOJA</h2>
+        <p>Venha conhecer de perto o universo Choccolari.<br>Esperamos por você!</p>
+        <a class="botao mapa-botao" href="https://maps.google.com/" target="_blank" rel="noopener">VER NO MAPA &nbsp; ➤</a>
+      </section>
+    </section>
+  </main>
+  <script src="javascript/contato.js"></script>
+</body>
+</html>
