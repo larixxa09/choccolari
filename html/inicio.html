@@ -1,11 +1,227 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>inicio</title>
-</head>
-<body>
-    
-</body>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choccolari - Início</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/inicio.css" />
+  </head>
+  <body>
+   
+    <!-- Cabeçalho Principal -->
+    <header class="main-header">
+      <div class="header-logo">
+        <svg
+          class="logo-icon-small"
+          viewBox="0 0 100 100"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M68 22C62 17 54 14 45 14C26 14 12 29 12 50C12 71 26 86 45 86C56 86 65 81 71 73"
+            stroke="#cda757"
+            stroke-width="5"
+            stroke-linecap="round"
+          />
+          <path
+            d="M63 27C58 23 52 20 45 20C30 20 19 33 19 50C19 67 30 80 45 80C53 80 60 76 66 70"
+            stroke="#cda757"
+            stroke-width="2"
+          />
+          <path
+            d="M42 68C42 52 52 38 68 32C66 48 56 62 42 68Z"
+            stroke="#cda757"
+            stroke-width="2.5"
+          />
+          <path
+            d="M46 65C52 55 58 45 66 35"
+            stroke="#cda757"
+            stroke-width="1.5"
+          />
+          <ellipse
+            cx="64"
+            cy="64"
+            rx="14"
+            ry="8"
+            transform="rotate(-25 64 64)"
+            stroke="#cda757"
+            stroke-width="2.5"
+          />
+          <path d="M53 69L75 59" stroke="#cda757" stroke-width="1.5" />
+        </svg>
+        <span class="brand-text">CHOCCOLARI</span>
+      </div>
+
+      </div>
+
+      <div class="top-utility-bar">
+      <a href="/html/login.html">LOGIN</a>
+      <a href="/html/cadastro.html">CADASTRO</a>
+      <a href="/html/inicio.html">INICIO</a>
+      <a href="/html/contato.html">CONTATO</a>
+      <a href="/html/sobre.html">SOBRE</a>
+      <a href="/html/colecoes.html" class="active-top">COLEÇÕES</a>
+    </div>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="search-btn" aria-label="Buscar">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="20" y1="20" x2="16.35" y2="16.35"></line>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Perfil">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+          </svg>
+        </button>
+        <button class="icon-btn bag-btn" aria-label="Sacola">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M6 7h12l1 13H5L6 7z"></path>
+            <path d="M9 7V5a3 3 0 0 1 6 0v2"></path>
+          </svg>
+          <span class="bag-badge" id="bag-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Seção Hero Principal -->
+    <main class="home-hero">
+      <!-- Coluna Esquerda: Identidade e Chamada -->
+      <section class="hero-left">
+        <!-- Subtítulo com Estrelas de Brilho nas Extremidades -->
+        <div class="tagline-wrapper">
+          <!-- Brilho Esquerdo -->
+          <svg
+            class="sparkle-icon left-sparkle"
+            viewBox="0 0 60 60"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M30 2C30 22 32 28 58 30C32 32 30 38 30 58C30 38 28 32 2 30C28 28 30 22 30 2Z"
+              fill="#cda757"
+            />
+          </svg>
+
+          <span class="tagline-text">EXCELÊNCIA EM CADA &nbsp;DETALHE</span>
+
+          <!-- Brilho Direito -->
+          <svg
+            class="sparkle-icon right-sparkle"
+            viewBox="0 0 60 60"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M30 2C30 22 32 28 58 30C32 32 30 38 30 58C30 38 28 32 2 30C28 28 30 22 30 2Z"
+              fill="#cda757"
+            />
+          </svg>
+        </div>
+
+        <!-- Título Principal da Marca -->
+        <h1 class="hero-main-title">CHOCCOLARI</h1>
+
+        <!-- Divisor Ornamental com Flor de Lótus -->
+        <div class="ornamental-divider">
+          <span class="line"></span>
+          <svg class="lotus-icon" viewBox="0 0 40 20" fill="none">
+            <path
+              d="M20 3C22 8 22 14 20 17C18 14 18 8 20 3Z"
+              stroke="#cda757"
+              stroke-width="1.3"
+            />
+            <path
+              d="M20 17C15 15 12 10 13 6C16 8 19 12 20 17Z"
+              stroke="#cda757"
+              stroke-width="1.3"
+            />
+            <path
+              d="M20 17C25 15 28 10 27 6C24 8 21 12 20 17Z"
+              stroke="#cda757"
+              stroke-width="1.3"
+            />
+            <path
+              d="M20 17C12 17 8 14 7 11C11 11 16 13 20 17Z"
+              stroke="#cda757"
+              stroke-width="1.3"
+            />
+            <path
+              d="M20 17C28 17 32 14 33 11C29 11 24 13 20 17Z"
+              stroke="#cda757"
+              stroke-width="1.3"
+            />
+          </svg>
+          <span class="line"></span>
+        </div>
+
+        <!-- Bloco de Textos Descritivos -->
+        <div class="hero-copy">
+          <h2 class="hero-headline">
+            SABORES QUE ENCANTAM.<br />
+            MOMENTOS QUE FICAM.
+          </h2>
+
+          <p class="hero-subcopy">
+            Chocolate &nbsp;premium feito com os melhores ingredientes<br />
+            para transformar o seu dia em algo inesquecível.
+          </p>
+
+          <!-- Botão CTA -->
+          <button type="button" id="btn-products" class="btn-cta-products">
+            <span>CONHEÇA NOSSOS PRODUTOS</span>
+            <svg width="26" height="24" viewBox="0 0 24 24" fill="#cda757">
+              <path d="M3 4l18 8-18 8 4.5-8L3 4z"></path>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- Coluna Direita: Imagem Grande da Caixa de Bombons -->
+      <section class="hero-right">
+        <div class="hero-box-showcase">
+          <!-- Substitua pelo caminho da imagem real da caixa de bombons -->
+          <img
+            src="/images/bombons classicos.png"
+            alt="Caixa de Bombons Premium Choccolari"
+            onerror="
+              this.src =
+                'https://placehold.co/720x560/050505/cda757?text=Caixa+Premium+Choccolari'
+            "
+          />
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/inicio.js"></script>
+  </body>
 </html>

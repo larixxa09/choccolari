@@ -1,42 +1,421 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Choccolari | Sobre nós</title>
-  <link rel="stylesheet" href="css/sobre.css">
-</head>
-<body>
-  <header class="cabecalho">
-    <a class="marca" href="inicio.html"><img src="imagens/logo.svg" alt="Logo Choccolari"><span>CHOCOLARI</span></a>
-    <nav class="menu"><a href="inicio.html">INÍCIO</a><a href="colecoes.html">COLEÇÕES</a><a class="ativo" href="sobre.html">SOBRE NÓS</a><a href="contato.html">CONTATO</a></nav>
-    <div class="atalhos"><a href="login.html" aria-label="Login">♙</a><a href="cadastro.html" aria-label="Cadastro">♡</a><a href="colecoes.html" aria-label="Carrinho">♧ <span class="contador">0</span></a></div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choccolari - Sobre Nós</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/sobre.css" />
+  </head>
+  <body>
+   
 
-  <main>
-    <section class="sobre-hero">
-      <div class="sobre-texto">
-        <p class="dourado">SOBRE A CHOCOLARI</p>
-        <h1>A arte de transformar<br><span>momentos em memórias.</span></h1>
-        <div class="divisor">━━━━━━ ❀ ━━━━━━</div>
-        <p>A Choccolari nasceu de paixão por chocolate e do desejo de criar experiências únicas. Selecionamos os melhores ingredientes do mundo e unimos técnica, delicadeza e amor em cada detalhe para entregar mais que chocolates: entregamos momentos inesquecíveis.</p>
+    <!-- Cabeçalho Principal -->
+    <header class="main-header">
+      <div class="header-logo">
+        <svg
+          class="logo-icon-small"
+          viewBox="0 0 100 100"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M68 22C62 17 54 14 45 14C26 14 12 29 12 50C12 71 26 86 45 86C56 86 65 81 71 73"
+            stroke="#cda757"
+            stroke-width="5"
+            stroke-linecap="round"
+          />
+          <path
+            d="M63 27C58 23 52 20 45 20C30 20 19 33 19 50C19 67 30 80 45 80C53 80 60 76 66 70"
+            stroke="#cda757"
+            stroke-width="2"
+          />
+          <path
+            d="M42 68C42 52 52 38 68 32C66 48 56 62 42 68Z"
+            stroke="#cda757"
+            stroke-width="2.5"
+          />
+          <path
+            d="M46 65C52 55 58 45 66 35"
+            stroke="#cda757"
+            stroke-width="1.5"
+          />
+          <ellipse
+            cx="64"
+            cy="64"
+            rx="14"
+            ry="8"
+            transform="rotate(-25 64 64)"
+            stroke="#cda757"
+            stroke-width="2.5"
+          />
+          <path d="M53 69L75 59" stroke="#cda757" stroke-width="1.5" />
+        </svg>
+        <span class="brand-text">CHOCCOLARI</span>
       </div>
-      <div class="sobre-imagem"><img src="imagens/fundo.svg" alt="Embalagem elegante da Choccolari"></div>
-    </section>
 
-    <section class="valores">
-      <article><span>♧</span><h2>QUALIDADE</h2></article>
-      <article><span>♡</span><h2>PAIXÃO</h2></article>
-      <article><span>♨</span><h2>ARTESANAL</h2></article>
-      <article><span>♢</span><h2>EXCLUSIVIDADE</h2></article>
-    </section>
+      <div class="top-utility-bar">
+      <a href="/html/login.html">LOGIN</a>
+      <a href="/html/cadastro.html">CADASTRO</a>
+      <a href="/html/inicio.html">INICIO</a>
+      <a href="/html/contato.html">CONTATO</a>
+      <a href="/html/sobre.html">SOBRE</a>
+      <a href="/html/colecoes.html" class="active-top">COLEÇÕES</a>
+    </div>
 
-    <section class="chocolate">
-      <div><p class="dourado">SOBRE O NOSSO CHOCOLATE</p><h2>Chocolate que encanta.<br><span>Qualidade que se sente.</span></h2><p>Nossos chocolates são produzidos com cacau nobre e ingredientes selecionados, sem abrir mão da textura, do sabor e da sofisticação que você merece.</p><a class="botao" href="colecoes.html">CONHEÇA NOSSOS PRODUTOS &nbsp; ➤</a></div>
-      <img src="imagens/chocolates.svg" alt="Seleção de bombons artesanais">
-    </section>
-    <section class="frase-final"><strong>Mais que chocolate,<br>criamos experiências para<br> celebrar o que realmente importa.</strong><span>♧ &nbsp; presentes inesquecíveis</span><span>✧ &nbsp; para todas as ocasiões</span><span>♡ &nbsp; feito para emocionar</span></section>
-  </main>
-  <script src="javascript/sobre.js"></script>
-</body>
+      <div class="header-actions">
+        <button class="icon-btn" id="search-btn" aria-label="Buscar">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="20" y1="20" x2="16.35" y2="16.35"></line>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Perfil">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+          </svg>
+        </button>
+        <button class="icon-btn bag-btn" aria-label="Sacola">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M6 7h12l1 13H5L6 7z"></path>
+            <path d="M9 7V5a3 3 0 0 1 6 0v2"></path>
+          </svg>
+          <span class="bag-badge">0</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="about-container">
+      <!-- SEÇÃO 1: SOBRE A CHOCCOLARI + ENVELOPE -->
+      <section class="about-split-section top-section">
+        <div class="text-col">
+          <span class="kicker-label">SOBRE A CHOCCOLARI</span>
+          <h1 class="serif-title">
+            A arte de transformar<br />
+            <span class="gold-text">momentos em memórias.</span>
+          </h1>
+
+          <div class="ornamental-divider">
+            <span class="line"></span>
+            <svg class="lotus-icon" viewBox="0 0 40 20" fill="none">
+              <path
+                d="M20 3C22 8 22 14 20 17C18 14 18 8 20 3Z"
+                stroke="#cda757"
+                stroke-width="1.3"
+              />
+              <path
+                d="M20 17C15 15 12 10 13 6C16 8 19 12 20 17Z"
+                stroke="#cda757"
+                stroke-width="1.3"
+              />
+              <path
+                d="M20 17C25 15 28 10 27 6C24 8 21 12 20 17Z"
+                stroke="#cda757"
+                stroke-width="1.3"
+              />
+              <path
+                d="M20 17C12 17 8 14 7 11C11 11 16 13 20 17Z"
+                stroke="#cda757"
+                stroke-width="1.3"
+              />
+              <path
+                d="M20 17C28 17 32 14 33 11C29 11 24 13 20 17Z"
+                stroke="#cda757"
+                stroke-width="1.3"
+              />
+            </svg>
+            <span class="line"></span>
+          </div>
+
+          <p class="body-paragraph">
+            A Choccolari nasceu de paixão por chocolate e do desejo<br />
+            de criar experiências únicas. Selecionamos &nbsp;os melhores<br />
+            ingredientes do mundo e unimos técnica, delicadeza e<br />
+            amor em cada detalhe para entregar mais que chocolates:<br />
+            entregamos momentos inesquecíveis.
+          </p>
+        </div>
+
+        <div class="image-col">
+          <!-- Substitua pelo caminho da imagem real do envelope preto -->
+          <img
+            src="/images/envelope choccolari.png"
+            alt="Envelope Choccolari com fita dourada"
+            onerror="
+              this.src =
+                'https://placehold.co/760x320/0c0c0c/cda757?text=Choccolari+Envelope'
+            "
+          />
+        </div>
+      </section>
+
+      <!-- SEÇÃO 2: PÍLULA SUPERIOR COM OS 4 PILARES -->
+      <section class="pillars-pill-bar">
+        <!-- Pilar 1: QUALIDADE -->
+        <div class="pillar-item">
+          <svg
+            width="36"
+            height="36"
+            viewBox="0 0 36 36"
+            fill="none"
+            stroke="#cda757"
+            stroke-width="1.4"
+          >
+            <ellipse
+              cx="14"
+              cy="18"
+              rx="6"
+              ry="12"
+              transform="rotate(-15 14 18)"
+            />
+            <path d="M11 7C14 14 14 22 17 29" />
+            <ellipse
+              cx="23"
+              cy="20"
+              rx="5"
+              ry="10"
+              transform="rotate(20 23 20)"
+            />
+            <path d="M26 11C23 17 22 23 20 29" />
+          </svg>
+          <span>QUALIDADE</span>
+        </div>
+
+        <div class="pill-divider"></div>
+
+        <!-- Pilar 2: PAIXÃO -->
+        <div class="pillar-item">
+          <svg
+            width="34"
+            height="34"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#cda757"
+            stroke-width="1.4"
+          >
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            />
+          </svg>
+          <span>PAIXÃO</span>
+        </div>
+
+        <div class="pill-divider"></div>
+
+        <!-- Pilar 3: ARTESANAL -->
+        <div class="pillar-item">
+          <svg
+            width="36"
+            height="36"
+            viewBox="0 0 36 36"
+            fill="none"
+            stroke="#cda757"
+            stroke-width="1.4"
+          >
+            <!-- Ramo central -->
+            <path d="M18 24V10" />
+            <path d="M18 14C15 13 13 10 14 7C17 8 18 11 18 14Z" />
+            <path d="M18 14C21 13 23 10 22 7C19 8 18 11 18 14Z" />
+            <!-- Mãos em concha -->
+            <path d="M9 17C8 22 11 27 17 29" />
+            <path d="M27 17C28 22 25 27 19 29" />
+          </svg>
+          <span>ARTESANAL</span>
+        </div>
+
+        <div class="pill-divider"></div>
+
+        <!-- Pilar 4: EXCLUSIVIDADE -->
+        <div class="pillar-item">
+          <svg
+            width="36"
+            height="36"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#cda757"
+            stroke-width="1.3"
+          >
+            <polygon points="6 3 18 3 22 9 12 21 2 9 6 3" />
+            <line x1="2" y1="9" x2="22" y2="9" />
+            <polyline points="6 3 9 9 12 3 15 9 18 3" />
+            <polyline points="9 9 12 21 15 9" />
+          </svg>
+          <span>EXCLUSIVIDADE</span>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 3: SOBRE O NOSSO CHOCOLATE + BOMBONS -->
+      <section class="about-split-section middle-section">
+        <div class="text-col">
+          <span class="kicker-label bold-kicker">SOBRE O NOSSO CHOCOLATE</span>
+          <h2 class="serif-subtitle">
+            Chocolate que encanta.<br />
+            <span class="gold-text">Qualidade que se sente.</span>
+          </h2>
+
+          <p class="body-paragraph compact">
+            Nossos chocolates são produzidos com cacau nobre e<br />
+            ingredientes selecionados,sem abrir mão da textura,<br />
+            do sabor e da sofisticação que você merece.
+          </p>
+
+          <button type="button" id="btn-products" class="btn-cta-products">
+            <span>CONHEÇA NOSSOS PRODUTOS</span>
+            <svg width="24" height="22" viewBox="0 0 24 24" fill="#cda757">
+              <path d="M3 4l18 8-18 8 4.5-8L3 4z"></path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="image-col">
+          <!-- Substitua pelo caminho da imagem real dos bombons sobre cacau -->
+          <img
+            src="/images/Trufas choccolari.png"
+            alt="Bombons Artesanais Choccolari"
+            onerror="
+              this.src =
+                'https://placehold.co/680x270/0c0c0c/cda757?text=Bombons+Choccolari'
+            "
+          />
+        </div>
+      </section>
+
+      <!-- SEÇÃO 4: PÍLULA INFERIOR COM RAMO DE CACAU E BENEFÍCIOS -->
+      <section class="bottom-pill-bar">
+        <!-- Bloco Esquerdo: Ilustração de Cacau + Frase -->
+        <div class="cocoa-statement">
+          <svg
+            class="cocoa-branch-svg"
+            width="76"
+            height="58"
+            viewBox="0 0 90 70"
+            fill="none"
+            stroke="#cda757"
+            stroke-width="1.3"
+          >
+            <!-- Fruto de cacau principal -->
+            <ellipse
+              cx="48"
+              cy="44"
+              rx="20"
+              ry="11"
+              transform="rotate(-12 48 44)"
+            />
+            <path d="M29 47C42 42 54 40 67 40" />
+            <path d="M31 41C44 37 55 36 65 37" />
+            <path d="M32 51C44 48 55 46 65 44" />
+            <!-- Folhas -->
+            <path d="M32 36C22 28 16 18 20 10C28 14 34 24 32 36Z" />
+            <path d="M20 10L31 35" />
+            <path d="M44 32C46 20 54 12 64 10C62 20 54 28 44 32Z" />
+            <path d="M64 10L45 31" />
+            <path d="M26 42C16 42 8 38 6 32C14 31 22 35 26 42Z" />
+          </svg>
+
+          <p class="cocoa-quote">
+            mais que chocolate,<br />
+            criamos experiências para<br />
+            celebrar o que realmente importa
+          </p>
+        </div>
+
+        <!-- Ícone 1: Presentes Inesquecíveis -->
+        <div class="bottom-feature">
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#cda757"
+            stroke-width="1.5"
+          >
+            <polyline points="20 12 20 22 4 22 4 12"></polyline>
+            <rect x="2" y="7" width="20" height="5"></rect>
+            <line x1="12" y1="22" x2="12" y2="7"></line>
+            <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
+            <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+          </svg>
+          <span>presentes inesqueciveis</span>
+        </div>
+
+        <div class="pill-divider short"></div>
+
+        <!-- Ícone 2: Para Todas as Ocasiões (Taças Brindando) -->
+        <div class="bottom-feature">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#cda757"
+            stroke-width="1.4"
+          >
+            <path
+              d="M6 3l2 7a3 3 0 0 0 3 2h0a3 3 0 0 0 2.8-2L15 3H6z"
+              transform="rotate(-12 10 8)"
+            />
+            <line x1="9" y1="12" x2="7" y2="20" />
+            <line x1="4" y1="20" x2="10" y2="20" />
+            <path
+              d="M11 4l1.5 6.5a3 3 0 0 0 2.8 2h0a3 3 0 0 0 3-2L20 4h-9z"
+              transform="rotate(12 15 8)"
+            />
+            <line x1="16" y1="12" x2="18" y2="20" />
+            <line x1="15" y1="20" x2="21" y2="20" />
+            <circle cx="13" cy="2" r="0.8" fill="#cda757" />
+          </svg>
+          <span>para todas as ocasiões</span>
+        </div>
+
+        <div class="pill-divider short"></div>
+
+        <!-- Ícone 3: Feito para Emocionar -->
+        <div class="bottom-feature">
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#cda757"
+            stroke-width="1.5"
+          >
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            />
+          </svg>
+          <span>feito para<br />emocionar</span>
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/sobre.js"></script>
+  </body>
 </html>

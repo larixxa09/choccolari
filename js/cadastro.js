@@ -101,13 +101,13 @@ formulario.addEventListener("submit", function (evento) {
     return;
   }
 
-  // Validar e-mail
-  if (!email.checkValidity()) {
-    mostrarErro("Digite um endereço de e-mail válido.");
+// Validar e-mail
+if (email.value.trim() !== "larissa.9264242@aluno.mg.gov.br") {
+    mostrarErro("Utilize o e-mail institucional autorizado.");
 
     email.focus();
     return;
-  }
+}
 
   // Validar senha
   if (senha.value.length < 8) {
@@ -134,17 +134,14 @@ formulario.addEventListener("submit", function (evento) {
   }
 
   // Todos os campos foram validados
-  mensagem.style.color = "#287A35";
+mensagem.style.color = "#287A35";
 
-  mensagem.textContent =
-    "Dados validados com sucesso! Integre o formulário ao sistema para criar sua conta.";
+mensagem.textContent = "Cadastro realizado com sucesso!";
 
-  console.log("Formulário validado:", {
-    nome: nome.value.trim(),
-    email: email.value.trim(),
-    dataNascimento: dataNascimento.value,
-    receberNovidades: document.getElementById("novidades").checked,
-  });
+// Direcionar para a página inicial
+setTimeout(function () {
+    window.location.href = "inicio.html";
+}, 1500);
 });
 
 // ===============================

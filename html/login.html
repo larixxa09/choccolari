@@ -1,33 +1,191 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Choccolari | Login</title>
-  <link rel="stylesheet" href="css/login.css">
-</head>
-<body>
-  <nav class="menu-superior"><a class="ativo" href="login.html">login</a><a href="cadastro.html">cadastro</a><a href="inicio.html">inicio</a><a href="contato.html">CONTATO</a><a href="sobre.html">sobre</a><a href="colecoes.html">COLEÇÕES</a></nav>
-  <main class="login-layout">
-    <section class="login-imagem"><img src="imagens/chocolates.svg" alt="Caixa de chocolates Choccolari"></section>
-    <section class="login-lado">
-      <form id="formLogin" class="caixa-login">
-        <h1>Bem-vindo de volta!</h1>
-        <p>Faça login para continuar sua experiência<br> com a <span>Choccolari.</span></p>
-        <div class="divisor">━━━━━━ ✦ ━━━━━━</div>
-        <label for="email">E-MAIL</label>
-        <input id="email" name="email" type="email" placeholder="✉   seu@email.com" autocomplete="email" required>
-        <label for="senha">SENHA</label>
-        <div class="senha-linha"><input id="senha" name="senha" type="password" placeholder="♙   Sua senha" autocomplete="current-password" required><button type="button" id="mostrarSenha" aria-label="Mostrar ou ocultar senha">◉</button></div>
-        <a class="esqueci" href="#" id="esqueciSenha">Esqueci minha senha</a>
-        <button class="botao" type="submit">ENTRAR</button>
-        <div class="ou">━━━━━━ &nbsp; OU &nbsp; ━━━━━━</div>
-        <button class="google" type="button" id="googleLogin"><span>G</span> Entrar com Google</button>
-        <p class="criar">Ainda não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
-        <p id="retorno" role="status"></p>
-      </form>
-    </section>
-  </main>
-  <script src="javascript/login.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choccolari - Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lora:ital,wght@0,400;1,500;1,600&family=Montserrat:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/login.css" />
+  </head>
+  <body>
+    <!-- Barra Superior Auxiliar -->
+    <header class="top-utility-bar">
+      <a href="#" class="active-top">LOGIN</a>
+      <a href="#">CADASTRO</a>
+      <a href="#">INICIO</a>
+      <a href="#">CONTATO</a>
+      <a href="#">SOBRE</a>
+      <a href="#">COLEÇÕES</a>
+    </header>
+
+    <!-- Layout Principal -->
+    <main class="login-layout">
+      <!-- Lado Esquerdo: Recorte Circular com Borda Dourada -->
+      <section class="left-showcase">
+        <div class="curved-image-frame">
+          <!-- Substitua pelo caminho da imagem real da caixa de bombons -->
+          <img
+            src="/images/edicoes_especiais.png"
+            alt="Caixa de Bombons Choccolari"
+            onerror="
+              this.src =
+                'https://placehold.co/650x750/0a0a0a/cda757?text=Choccolari'
+            "
+          />
+        </div>
+      </section>
+
+      <!-- Lado Direito: Card de Login -->
+      <section class="right-login-area">
+        <div class="login-card-outer">
+          <div class="login-card-inner">
+            <h1 class="welcome-title">Bem-vindo de volta!</h1>
+            <p class="welcome-subtitle">
+              Faça login para continuar sua experiência<br />
+              com a <span class="gold-text">Choccolari.</span>
+            </p>
+
+            <!-- Divisor Ornamental com Estrela de 4 Pontas -->
+            <div class="ornamental-star-divider">
+              <span class="tapered-line left"></span>
+              <svg
+                class="star-4pt"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="#cda757"
+              >
+                <path
+                  d="M12 1L14.5 9.5L23 12L14.5 14.5L12 23L9.5 14.5L1 12L9.5 9.5L12 1Z"
+                />
+              </svg>
+              <span class="tapered-line right"></span>
+            </div>
+
+            <!-- Formulário -->
+            <form id="login-form">
+              <div class="form-group">
+                <label for="email">E-MAIL</label>
+                <div class="input-box">
+                  <svg
+                    class="input-icon"
+                    width="16"
+                    height="14"
+                    viewBox="0 0 24 18"
+                    fill="none"
+                    stroke="#666666"
+                    stroke-width="1.5"
+                  >
+                    <rect x="1" y="1" width="22" height="16" rx="2"></rect>
+                    <path d="M1 2L12 10L23 2"></path>
+                  </svg>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="seu@email.com"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="senha">SENHA</label>
+                <div class="input-box">
+                  <svg
+                    class="input-icon"
+                    width="16"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#666666"
+                    stroke-width="1.5"
+                  >
+                    <rect x="4" y="11" width="16" height="10" rx="2"></rect>
+                    <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
+                    <circle cx="12" cy="16" r="1"></circle>
+                  </svg>
+                  <input
+                    type="password"
+                    id="senha"
+                    name="senha"
+                    placeholder="Sua senha"
+                    required
+                  />
+                  <button
+                    type="button"
+                    id="toggle-password"
+                    class="eye-btn"
+                    aria-label="Mostrar ou ocultar senha"
+                  >
+                    <svg
+                      id="eye-icon"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#777777"
+                      stroke-width="1.5"
+                    >
+                      <path
+                        d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"
+                      ></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                  </button>
+                </div>
+                <a href="#" id="forgot-password" class="forgot-link"
+                  >Esqueci minha senha</a
+                >
+              </div>
+
+              <button type="submit" class="btn-entrar">ENTRAR</button>
+
+              <!-- Separador OU -->
+              <div class="or-divider">
+                <span class="or-line"></span>
+                <span class="or-text">OU</span>
+                <span class="or-line"></span>
+              </div>
+
+              <!-- Login Social Google -->
+              <button type="button" id="btn-google" class="btn-google">
+                <svg width="18" height="18" viewBox="0 0 24 24">
+                  <path
+                    fill="#EA4335"
+                    d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.4 1 3.5 3.6 1.6 7.4l3.7 2.8C6.2 7.2 8.9 5 12 5z"
+                  />
+                  <path
+                    fill="#4285F4"
+                    d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.6l3.7 2.9c2.2-2 3.7-5 3.7-8.7z"
+                  />
+                  <path
+                    fill="#FBBC05"
+                    d="M5.3 14.8c-.2-.8-.4-1.6-.4-2.5s.2-1.7.4-2.5L1.6 7C.6 9 0 11.2 0 13.5s.6 4.5 1.6 6.5l3.7-2.8z"
+                  />
+                  <path
+                    fill="#34A853"
+                    d="M12 24c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3.1 0-5.8-2.1-6.7-5l-3.7 2.8C3.5 21.1 7.4 24 12 24z"
+                  />
+                </svg>
+                <span>Entrar com Google</span>
+              </button>
+
+              <p class="signup-prompt">
+                Ainda &nbsp;não tem uma conta?
+                <a href="#" class="gold-link">Cadastre-se</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/login.js"></script>
+  </body>
 </html>

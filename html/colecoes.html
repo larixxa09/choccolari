@@ -1,36 +1,378 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Choccolari | Coleções</title>
-  <link rel="stylesheet" href="css/colecoes.css">
-</head>
-<body>
-  <header class="cabecalho">
-    <a class="marca" href="inicio.html"><img src="imagens/logo.svg" alt="Logo Choccolari"><span>CHOCOLARI</span></a>
-    <nav class="menu">
-      <a href="inicio.html">INÍCIO</a><a class="ativo" href="colecoes.html">COLEÇÕES</a>
-      <a href="sobre.html">SOBRE NÓS</a><a href="contato.html">CONTATO</a>
-    </nav>
-    <div class="atalhos"><a href="login.html" aria-label="Login">♙</a><a href="cadastro.html" aria-label="Cadastro">♡</a><a href="#" aria-label="Carrinho">♧ <span class="contador">0</span></a></div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choccolari - Coleções</title>
+    <!-- Fontes Google para fidelidade tipográfica -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/colecoes.css" />
+  </head>
+  <body>
+  
 
-  <main class="pagina-colecoes">
-    <section class="intro">
-      <img src="imagens/logo.svg" alt="Logo Choccolari" class="logo-grande">
-      <h1>Nossas coleções<br><span>para cada momento.</span></h1>
-      <div class="divisor">━━━━━━ ❀ ━━━━━━</div>
-      <p>Descubra sabores únicos e escolha a coleção perfeita para presentear ou se deliciar.</p>
-    </section>
-    <section class="grade-colecoes">
-      <article class="colecao"><img src="imagens/classicos.svg" alt="Caixa de chocolates clássicos"><h2>CLÁSSICOS</h2><p>Sabores tradicionais que<br> nunca saem de moda.</p></article>
-      <article class="colecao"><img src="imagens/premium.svg" alt="Caixa de chocolates premium"><h2>PREMIUM</h2><p>Ingredientes selecionados<br> e receitas exclusivas.</p></article>
-      <article class="colecao"><img src="imagens/recheados.svg" alt="Bombons recheados"><h2>BOMBONS RECHEADOS</h2><p>Recheios cremosos que<br> derretem na boca.</p></article>
-      <article class="colecao"><img src="imagens/especiais.svg" alt="Edição especial de chocolates"><h2>EDIÇÕES ESPECIAIS</h2><p>Criações sazonais para<br> momentos inesquecíveis.</p></article>
-    </section>
-  </main>
-  <footer class="rodape">♧ &nbsp; Embalagens sofisticadas e o cuidado que você já conhece.</footer>
-  <script src="javascript/colecoes.js"></script>
-</body>
+    <!-- Cabeçalho Principal -->
+    <header class="main-header">
+      <div class="header-logo">
+        <!-- SVG do Logotipo C com ramo de cacau -->
+        <svg
+          class="logo-icon-small"
+          viewBox="0 0 100 100"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M68 22C62 17 54 14 45 14C26 14 12 29 12 50C12 71 26 86 45 86C56 86 65 81 71 73"
+            stroke="#cda757"
+            stroke-width="5"
+            stroke-linecap="round"
+          />
+          <path
+            d="M63 27C58 23 52 20 45 20C30 20 19 33 19 50C19 67 30 80 45 80C53 80 60 76 66 70"
+            stroke="#cda757"
+            stroke-width="2"
+          />
+          <!-- Folhas e fruto de cacau estilizados -->
+          <path
+            d="M42 68C42 52 52 38 68 32C66 48 56 62 42 68Z"
+            stroke="#cda757"
+            stroke-width="2.5"
+          />
+          <path
+            d="M46 65C52 55 58 45 66 35"
+            stroke="#cda757"
+            stroke-width="1.5"
+          />
+          <ellipse
+            cx="64"
+            cy="64"
+            rx="14"
+            ry="8"
+            transform="rotate(-25 64 64)"
+            stroke="#cda757"
+            stroke-width="2.5"
+          />
+          <path d="M53 69L75 59" stroke="#cda757" stroke-width="1.5" />
+        </svg>
+        <span class="brand-text">CHOCCOLARI</span>
+      </div>
+
+      <div class="top-utility-bar">
+      <a href="/html/login.html">LOGIN</a>
+      <a href="/html/cadastro.html">CADASTRO</a>
+      <a href="/html/inicio.html">INICIO</a>
+      <a href="/html/contato.html">CONTATO</a>
+      <a href="/html/sobre.html">SOBRE</a>
+      <a href="/html/colecoes.html" class="active-top">COLEÇÕES</a>
+    </div>
+
+      <div class="header-actions">
+        <!-- Ícone Lupa -->
+        <button class="icon-btn" id="search-btn" aria-label="Buscar">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="20" y1="20" x2="16.35" y2="16.35"></line>
+          </svg>
+        </button>
+        <!-- Ícone Perfil -->
+        <button class="icon-btn" aria-label="Perfil">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+          </svg>
+        </button>
+        <!-- Ícone Sacola -->
+        <button class="icon-btn bag-btn" id="bag-btn" aria-label="Sacola">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M6 7h12l1 13H5L6 7z"></path>
+            <path d="M9 7V5a3 3 0 0 1 6 0v2"></path>
+          </svg>
+          <span class="bag-badge" id="bag-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="collections-container">
+      <!-- Coluna Esquerda: Marca e Chamada -->
+      <section class="left-hero">
+        <div class="hero-logo-box">
+          <svg
+            class="logo-icon-large"
+            viewBox="0 0 100 100"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M68 22C62 17 54 14 45 14C26 14 12 29 12 50C12 71 26 86 45 86C56 86 65 81 71 73"
+              stroke="#cda757"
+              stroke-width="5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M63 27C58 23 52 20 45 20C30 20 19 33 19 50C19 67 30 80 45 80C53 80 60 76 66 70"
+              stroke="#cda757"
+              stroke-width="2"
+            />
+            <path
+              d="M42 68C42 52 52 38 68 32C66 48 56 62 42 68Z"
+              stroke="#cda757"
+              stroke-width="2.5"
+            />
+            <path
+              d="M46 65C52 55 58 45 66 35"
+              stroke="#cda757"
+              stroke-width="1.5"
+            />
+            <ellipse
+              cx="64"
+              cy="64"
+              rx="14"
+              ry="8"
+              transform="rotate(-25 64 64)"
+              stroke="#cda757"
+              stroke-width="2.5"
+            />
+            <path d="M53 69L75 59" stroke="#cda757" stroke-width="1.5" />
+          </svg>
+          <h1 class="hero-brand-title">CHOCCOLARI</h1>
+        </div>
+
+        <!-- Divisor Ornamental Superior -->
+        <div class="ornamental-divider">
+          <span class="line"></span>
+          <svg class="lotus-icon" viewBox="0 0 40 20" fill="none">
+            <path
+              d="M20 3C22 8 22 14 20 17C18 14 18 8 20 3Z"
+              stroke="#cda757"
+              stroke-width="1.3"
+            />
+            <path
+              d="M20 17C15 15 12 10 13 6C16 8 19 12 20 17Z"
+              stroke="#cda757"
+              stroke-width="1.3"
+            />
+            <path
+              d="M20 17C25 15 28 10 27 6C24 8 21 12 20 17Z"
+              stroke="#cda757"
+              stroke-width="1.3"
+            />
+            <path
+              d="M20 17C12 17 8 14 7 11C11 11 16 13 20 17Z"
+              stroke="#cda757"
+              stroke-width="1.3"
+            />
+            <path
+              d="M20 17C28 17 32 14 33 11C29 11 24 13 20 17Z"
+              stroke="#cda757"
+              stroke-width="1.3"
+            />
+          </svg>
+          <span class="line"></span>
+        </div>
+
+        <h2 class="hero-subtitle">
+          Nossas coleções<br />
+          <span class="gold-highlight">para cada &nbsp;momento.</span>
+        </h2>
+
+        <!-- Divisor Ornamental Inferior -->
+        <div class="ornamental-divider">
+          <span class="line"></span>
+          <svg class="lotus-icon" viewBox="0 0 40 20" fill="none">
+            <path
+              d="M20 3C22 8 22 14 20 17C18 14 18 8 20 3Z"
+              stroke="#cda757"
+              stroke-width="1.3"
+            />
+            <path
+              d="M20 17C15 15 12 10 13 6C16 8 19 12 20 17Z"
+              stroke="#cda757"
+              stroke-width="1.3"
+            />
+            <path
+              d="M20 17C25 15 28 10 27 6C24 8 21 12 20 17Z"
+              stroke="#cda757"
+              stroke-width="1.3"
+            />
+            <path
+              d="M20 17C12 17 8 14 7 11C11 11 16 13 20 17Z"
+              stroke="#cda757"
+              stroke-width="1.3"
+            />
+            <path
+              d="M20 17C28 17 32 14 33 11C29 11 24 13 20 17Z"
+              stroke="#cda757"
+              stroke-width="1.3"
+            />
+          </svg>
+          <span class="line"></span>
+        </div>
+
+        <p class="hero-description">
+          Descubra sabores únicos e<br />
+          escolha a coleção perfeita<br />
+          para presentear ou se deliciar.
+        </p>
+      </section>
+
+      <!-- Coluna Direita: Grade de Coleções + Rodapé de Destaque -->
+      <section class="right-collections">
+        <div class="collections-grid">
+          <!-- Card 1 -->
+          <article class="collection-card" data-collection="Clássicos">
+            <div class="card-image-wrapper">
+              <!-- Substitua o src pela imagem real da caixa Clássicos -->
+              <img
+                src="/images/bombons classicos.png"
+                alt="Caixa Clássicos Choccolari"
+                onerror="
+                  this.src =
+                    'https://placehold.co/320x200/141414/cda757?text=Caixa+Cl%C3%A1ssicos'
+                "
+              />
+            </div>
+            <h3>CLÁSSICOS</h3>
+            <p>Sabores tradicionais que<br />nunca saem de moda.</p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="collection-card" data-collection="Premium">
+            <div class="card-image-wrapper">
+              <!-- Substitua o src pela imagem real da caixa Premium -->
+              <img
+                src="/images/bombom premium.png"
+                alt="Caixa Premium Choccolari"
+                onerror="
+                  this.src =
+                    'https://placehold.co/320x200/141414/cda757?text=Caixa+Premium'
+                "
+              />
+            </div>
+            <h3>PREMIUM</h3>
+            <p>Ingredientes selecionados<br />e receitas exclusivas.</p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="collection-card" data-collection="Bombons Recheados">
+            <div class="card-image-wrapper">
+              <!-- Substitua o src pela imagem real da caixa Bombons Recheados -->
+              <img
+                src="/images/bombons_recheados.png"
+                alt="Caixa Bombons Recheados Choccolari"
+                onerror="
+                  this.src =
+                    'https://placehold.co/320x200/141414/cda757?text=Bombons+Recheados'
+                "
+              />
+            </div>
+            <h3>BOMBONS RECHEADOS</h3>
+            <p>Recheios &nbsp;cremosos que<br />derretem na boca.</p>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="collection-card" data-collection="Edições Especiais">
+            <div class="card-image-wrapper">
+              <!-- Substitua o src pela imagem real da caixa Edições Especiais -->
+              <img
+                src="/images/edicoes_especiais.png"
+                alt="Caixa Edições Especiais Choccolari"
+                onerror="
+                  this.src =
+                    'https://placehold.co/320x200/141414/cda757?text=Edi%C3%A7%C3%B5es+Especiais'
+                "
+              />
+            </div>
+            <h3>EDIÇÕES ESPECIAIS</h3>
+            <p>Criações sazonais para<br />momentos inesquecíveis.</p>
+          </article>
+        </div>
+
+        <!-- Rodapé da Seção Direita -->
+        <div class="packaging-note">
+          <div class="ornamental-divider wide">
+            <span class="line"></span>
+            <svg class="lotus-icon" viewBox="0 0 40 20" fill="none">
+              <path
+                d="M20 3C22 8 22 14 20 17C18 14 18 8 20 3Z"
+                stroke="#cda757"
+                stroke-width="1.3"
+              />
+              <path
+                d="M20 17C15 15 12 10 13 6C16 8 19 12 20 17Z"
+                stroke="#cda757"
+                stroke-width="1.3"
+              />
+              <path
+                d="M20 17C25 15 28 10 27 6C24 8 21 12 20 17Z"
+                stroke="#cda757"
+                stroke-width="1.3"
+              />
+              <path
+                d="M20 17C12 17 8 14 7 11C11 11 16 13 20 17Z"
+                stroke="#cda757"
+                stroke-width="1.3"
+              />
+              <path
+                d="M20 17C28 17 32 14 33 11C29 11 24 13 20 17Z"
+                stroke="#cda757"
+                stroke-width="1.3"
+              />
+            </svg>
+            <span class="line"></span>
+          </div>
+
+          <div class="gift-info">
+            <!-- Ícone de Presente Dourado -->
+            <svg
+              class="gift-icon"
+              width="38"
+              height="38"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#cda757"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="20 12 20 22 4 22 4 12"></polyline>
+              <rect x="2" y="7" width="20" height="5"></rect>
+              <line x1="12" y1="22" x2="12" y2="7"></line>
+              <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
+              <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+            </svg>
+            <p>Embalagens sofisticadas e o cuidado<br />que vc ja conhece</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/coleções.js"></script>
+  </body>
 </html>
